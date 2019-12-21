@@ -11,7 +11,8 @@
   "dependencies": {
     "core-js": "^3.4.3",
     "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -53,6 +54,11 @@
         }
       }
     ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": false
   },
   "browserslist": [
     "> 1%",
