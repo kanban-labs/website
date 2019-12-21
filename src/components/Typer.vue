@@ -1,41 +1,39 @@
 <template>
   <div class="wrapper">
-    <vue-typer
-      :text="['Kanban', 'Kan{b}an', 'kanban;', 'Kan}an']"
-      :repeat="Infinity"
+    <vue-typed-js
+      :strings="['Kanban', 'Kan{b}an', 'kanban;', 'Kan}an']"
+      :smartBackspace="false"
+      :loop="true"
       :shuffle="false"
-      initial-action="typing"
-      :pre-type-delay="70"
-      :type-delay="70"
-      :pre-erase-delay="1600"
-      :erase-delay="60"
+      :startDelay="70"
+      :typeSpeed="70"
+      :backDelay="1600"
+      :backSpeed="70"
       erase-style="backspace"
       :erase-on-complete="false"
       caret-animation="smooth"
-    />
+      ><h1 class="typing"></h1
+    ></vue-typed-js>
   </div>
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer'
+import { VueTypedJs } from 'vue-typed-js'
 
 export default {
   name: 'typer',
-  components: { VueTyper }
+  components: { VueTypedJs }
 }
 </script>
 
 <style lang="scss">
 .wrapper {
-  .vue-typer {
-    font-family: inherit;
-    font-size: 3rem;
-  }
-  .vue-typer .custom.char.typed {
-    color: white;
-  }
-  .vue-typer .custom.caret {
-    width: 6px;
+  font-family: inherit;
+  font-size: 3rem;
+  color: white;
+
+  .typed-cursor {
+    font-size: 1.875rem;
     background-color: white;
   }
 }
