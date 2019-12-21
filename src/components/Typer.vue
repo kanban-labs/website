@@ -28,12 +28,12 @@ export default {
 
 <style lang="scss">
 .wrapper {
-  font-family: inherit;
-  font-size: 3rem;
+  font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+  font-size: 2rem;
   color: white;
 
   .typed-cursor {
-    font-size: 1.875rem;
+    font-size: 2.75rem;
     background-color: white;
   }
 }

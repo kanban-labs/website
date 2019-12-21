@@ -38,15 +38,19 @@ body {
   min-height: 100vh;
   height: 100%;
   background-color: var(--highlight);
-  padding: 1rem;
+  background-image: linear-gradient(62deg, rgb(142, 197, 252) 0%, rgb(224, 195, 252) 100%);
+  // background-image: linear-gradient(66deg, rgb(254, 225, 64) 0%, rgb(250, 112, 154) 100%);
+  padding: 2rem;
 }
 #app {
-  height: calc(100vh - 2rem);
+  height: calc(100vh - 4rem);
   width: 100%;
   background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 6px rgba(45, 55, 72, 0.1), 0px 2px 4px rgba(45, 55, 72, 0.06);
 }
 body,
 button,
@@ -62,14 +66,6 @@ ul {
   list-style: none;
 }
 
-/* Global styles */
-h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  color: var(--content);
-  font-weight: 700;
-}
-
 button {
   display: block;
   border: none;
@@ -77,6 +73,7 @@ button {
   color: inherit;
   font-size: inherit;
 }
+
 button[disabled],
 .cursor-disabled {
   cursor: not-allowed;
@@ -99,7 +96,7 @@ a {
 }
 a:hover {
   text-decoration-style: solid;
-  text-decoration-width: 2px;
+  // text-decoration-width: 2px;
 }
 
 ::placeholder {
