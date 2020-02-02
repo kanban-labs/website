@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <typer />
+
+    <footer>
+      <p>consultation · review · development</p>
+      <p>📧 <a href="mailto:team@kanban.ee" subject="Hi there 👋">team@kanban</a></p>
+    </footer>
   </div>
 </template>
 
@@ -15,9 +20,10 @@ export default {
 
 <style lang="scss">
 :root {
-  --highlight: tomato;
+  --highlight: rgb(142, 197, 252);
   --content: #fefefe;
   --background: #222;
+  --padding: 2rem;
 }
 
 /* Handicraft reset */
@@ -40,16 +46,23 @@ body {
   background-color: var(--highlight);
   background-image: linear-gradient(62deg, rgb(142, 197, 252) 0%, rgb(224, 195, 252) 100%);
   // background-image: linear-gradient(66deg, rgb(254, 225, 64) 0%, rgb(250, 112, 154) 100%);
-  padding: 2rem;
+  padding: var(--padding);
+}
+@media screen and (max-width: 40rem) {
+  :root {
+    --padding: 1rem;
+  }
 }
 #app {
-  height: calc(100vh - 4rem);
-  width: 100%;
-  background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: calc(100vh - 2 * var(--padding));
+  width: 100%;
   border-radius: 0.5rem;
+  background-color: var(--background);
   box-shadow: 0px 2px 6px rgba(45, 55, 72, 0.1), 0px 2px 4px rgba(45, 55, 72, 0.06);
 }
 body,
@@ -105,5 +118,17 @@ a:hover {
 ::selection {
   background-color: var(--highlight);
   color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 32vh;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  font-size: 1rem;
+}
+footer p:last-child {
+  margin-top: 1rem;
 }
 </style>
