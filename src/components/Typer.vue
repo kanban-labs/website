@@ -28,7 +28,9 @@ export default {
 
 <style lang="scss">
 .wrapper {
-  font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+  position: relative;
+  z-index: 1;
+  font-family: var(--font);
   font-size: 2rem;
   color: white;
 

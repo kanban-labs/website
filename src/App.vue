@@ -1,20 +1,23 @@
 <template>
   <div id="app">
+    <grid-lines />
+
     <typer />
 
     <footer>
       <p>consultation · review · development</p>
-      <p>📧 <a href="mailto:team@kanban.ee" subject="Hi there 👋">team@kanban</a></p>
+      <p>📧 <a href="mailto:team@kanban.ee?subject=Hi%20there%20👋" class="contact-link">team@kanban</a></p>
     </footer>
   </div>
 </template>
 
 <script>
 import Typer from './components/Typer'
+import GridLines from './components/GridLines'
 
 export default {
   name: 'app',
-  components: { Typer }
+  components: { Typer, GridLines }
 }
 </script>
 
@@ -24,6 +27,8 @@ export default {
   --content: #fefefe;
   --background: #222;
   --padding: 2rem;
+  --font: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+  --font-alt: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
 }
 
 /* Handicraft reset */
@@ -69,7 +74,7 @@ body,
 button,
 input,
 textarea {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -124,11 +129,14 @@ footer {
   position: absolute;
   bottom: 32vh;
   color: white;
-  font-family: monospace;
+  font-family: var(--font);
   text-align: center;
   font-size: 1rem;
 }
 footer p:last-child {
   margin-top: 1rem;
+}
+.contact-link {
+  letter-spacing: 2.6px;
 }
 </style>
