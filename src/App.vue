@@ -139,4 +139,10 @@ footer p:last-child {
 .contact-link {
   letter-spacing: 2.6px;
 }
+
+@media screen and (max-width: 40rem) {
+  html {
+    font-size: 0.8rem;
+  }
+}
 </style>
