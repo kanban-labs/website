@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <grid-lines />
-
-    <typer />
+    <!-- <grid-lines /> -->
+    <scrambler />
+    <!-- <typer /> -->
 
     <footer>
-      <p>consultation · review · development</p>
-      <p>📧 <a href="mailto:team@kanban.ee?subject=Hi%20there%20👋" class="contact-link">team@kanban</a></p>
+      <!-- <p>consultation · review · development</p> -->
+      <a href="mailto:team@kanban.ee?subject=Hi%20there%20👋" class="contact-link">team@kanban</a>
     </footer>
   </div>
 </template>
 
 <script>
-import Typer from './components/Typer'
-import GridLines from './components/GridLines'
+// import Typer from './components/Typer'
+// import GridLines from './components/GridLines'
+import Scrambler from './components/Scrambler'
 
 export default {
   name: 'app',
-  components: { Typer, GridLines }
+  components: { Scrambler }
 }
 </script>
 
@@ -109,12 +110,7 @@ button,
 }
 
 a {
-  text-decoration-style: dashed;
   color: inherit;
-}
-a:hover {
-  text-decoration-style: solid;
-  // text-decoration-width: 2px;
 }
 
 ::placeholder {
@@ -127,17 +123,22 @@ a:hover {
 
 footer {
   position: absolute;
-  bottom: 32vh;
+  bottom: 35vh;
   color: white;
   font-family: var(--font);
   text-align: center;
   font-size: 1rem;
 }
-footer p:last-child {
-  margin-top: 1rem;
-}
 .contact-link {
   letter-spacing: 2.6px;
+  display: inline-block;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: transform ease-out 0.2s;
+  transform: scale(1);
+}
+.contact-link:hover {
+  transform: scale(1.0825);
 }
 
 @media screen and (max-width: 40rem) {
