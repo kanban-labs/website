@@ -1,7 +1,7 @@
 # website
 
 ## TODO:
-- Migrate to [Saber](https://saber.land)
+- Migrate to [Saber](https://saber.land) or [vite](https://github.com/vitejs/vite)
 
 ## Project setup
 ```
