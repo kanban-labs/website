@@ -35,6 +35,8 @@ export default {
   justify-content: center;
   align-items: center;
   display: flex;
+  position: relative;
+  z-index: 2;
 }
 .text {
   font-weight: 100;
